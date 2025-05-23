@@ -1,0 +1,74 @@
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #000;
+    --nav-bg: #333;
+    --link-color: white;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #fff;
+    --nav-bg: #1f1f1f;
+    --link-color: #90caf9;
+    --card-shadow: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#menu {
+    background-color: var(--nav-bg);
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+#menu a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#darkModeToggle {
+    background: none;
+    border: none;
+    color: var(--link-color);
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1em;
+    padding: 2em;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px var(--card-shadow);
+}
