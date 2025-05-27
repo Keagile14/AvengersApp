@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('images/avengers.jpg')
+  }
+
+ 
+  .contact-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  
+  .contact-box {
+    background: black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .contact-left,
+  .contact-right {
+    flex: 1 1 300px;
+    padding: 30px;
+  }
+  
+  .contact-left h2 {
+    margin-bottom: 20px;
+    color: #222;
+  }
+  
+  .field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  .btn {
+    background-color: #e23636;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #c62828;
+  }
+  
+  .contact-right img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-box {
+      flex-direction: column;
+    }
+  
+    .contact-right {
+      order: -1;
+      padding: 0;
+    }
+  }
+  
